@@ -138,7 +138,7 @@ model.matrix.Formula <- function(object, data = environment(object), ..., lhs = 
     form <- formula(object, lhs = lhs, rhs = rhs, collapse = c(FALSE, TRUE))
     mt <- delete.response(terms(form, data = data))
   } else {
-    mt <- delete.response(terms(object, lhs = lhs, rhs = rhs, dot = dot))
+    mt <- delete.response(terms(object, lhs = lhs, rhs = rhs, dot = dot, data = data))
   }
   model.matrix(mt, data = data, ...)
 }
