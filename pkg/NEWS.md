@@ -1,3 +1,10 @@
+# Formula 1.2-6
+
+* New pkgdown web page: <https://Formula.R-Forge.R-project.org/>
+
+* Converted the package vignette from `Sweave` to `rmarkdown`.
+
+
 # Formula 1.2-5
 
 * Improve `dot` handling in `model.matrix()` method when setting up the

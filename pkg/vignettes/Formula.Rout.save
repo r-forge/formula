@@ -1,7 +1,8 @@
 
-> options(width = 70, prompt = "R> ", continue = "+  ")
-
 > library("Formula")
+
+> knitr::opts_chunk$set(engine = "R", collapse = TRUE, 
++     comment = "##", message = FALSE, warning = FALSE, echo = TRUE)
 
 > set.seed(1090)
 
@@ -120,8 +121,8 @@ log(x1)  0  0       0  0       0       1  0     0
 x3       0  0       0  0       0       0  1     2
 x4       0  0       0  0       0       0  0     1
 attr(,"term.labels")
-[1] "y1"      "y2"      "log(y3)" "x1"      "I(x2^2)" "log(x1)"
-[7] "x3"      "x3:x4"  
+[1] "y1"      "y2"      "log(y3)" "x1"      "I(x2^2)" "log(x1)" "x3"     
+[8] "x3:x4"  
 attr(,"order")
 [1] 1 1 1 1 1 1 1 2
 attr(,"intercept")
@@ -187,3 +188,6 @@ y1 | y2 ~ x1 | x2 | x3
   -0.169027   -1.260073 
 
  *** Run successfully completed ***
+> proc.time()
+   user  system elapsed 
+  0.497   0.044   0.537 
