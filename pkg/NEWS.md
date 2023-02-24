@@ -121,6 +121,9 @@
 * `vignette("Formula", package = "Formula")` illustrates usage of
   the tools provided by the package and explains the ideas underlying
   its implementation.
+  
+* Excluded `has.intercept()` functionality, rely on standard `terms` attribute
+  instead.
 
 
 # Formula 0.1-3
