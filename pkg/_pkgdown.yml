@@ -1,0 +1,19 @@
+url: "https://Formula.R-Forge.R-project.org/"
+destination: "../www/"
+
+template:
+  assets: "pkgdown/assets/"
+  opengraph:
+    image:
+      src: logo.png
+    twitter:
+      creator: "@AchimZeileis"
+      card: summary
+
+reference:
+  - title: "Extended model formulas"
+    contents: 
+      - Formula
+  - title: "Methods"
+    contents: 
+      - model.frame.Formula
