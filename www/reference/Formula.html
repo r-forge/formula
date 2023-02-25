@@ -168,31 +168,31 @@
 <span class="r-in"><span><span class="co">## switch back to original formula</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/formula.html" class="external-link">formula</a></span><span class="op">(</span><span class="va">F1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> y ~ x1 + x2 | z1 + z2 + z3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55b988eb3718&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x5643fa92b910&gt;</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## create formula with various transformations</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/formula.html" class="external-link">formula</a></span><span class="op">(</span><span class="va">F1</span>, rhs <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> y ~ x1 + x2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55b988eb3718&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x5643fa92b910&gt;</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/formula.html" class="external-link">formula</a></span><span class="op">(</span><span class="va">F1</span>, collapse <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> y ~ x1 + x2 + (z1 + z2 + z3)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55b988eb3718&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x5643fa92b910&gt;</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/formula.html" class="external-link">formula</a></span><span class="op">(</span><span class="va">F1</span>, lhs <span class="op">=</span> <span class="fl">0</span>, rhs <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ~z1 + z2 + z3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55b988eb3718&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x5643fa92b910&gt;</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## put it together from its parts</span></span></span>
 <span class="r-in"><span><span class="fu">as.Formula</span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x1</span> <span class="op">+</span> <span class="va">x2</span>, <span class="op">~</span> <span class="va">z1</span> <span class="op">+</span> <span class="va">z2</span> <span class="op">+</span> <span class="va">z3</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> y ~ x1 + x2 | z1 + z2 + z3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55b988eb3718&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x5643fa92b910&gt;</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## update the formula</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/update.html" class="external-link">update</a></span><span class="op">(</span><span class="va">F1</span>, <span class="va">.</span> <span class="op">~</span> <span class="va">.</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/AsIs.html" class="external-link">I</a></span><span class="op">(</span><span class="va">x1</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span> <span class="op">|</span> <span class="va">.</span> <span class="op">-</span> <span class="va">z2</span> <span class="op">-</span> <span class="va">z3</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> y ~ x1 + x2 + I(x1^2) | z1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55b988eb3718&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x5643fa92b910&gt;</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/update.html" class="external-link">update</a></span><span class="op">(</span><span class="va">F1</span>, <span class="va">.</span> <span class="op">|</span> <span class="va">y2</span> <span class="op">+</span> <span class="va">y3</span> <span class="op">~</span> <span class="va">.</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> y | y2 + y3 ~ x1 + x2 | z1 + z2 + z3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55b988eb3718&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x5643fa92b910&gt;</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># create a multi-response multi-part formula</span></span></span>
 <span class="r-in"><span><span class="va">f2</span> <span class="op">&lt;-</span> <span class="va">y1</span> <span class="op">|</span> <span class="va">y2</span> <span class="op">+</span> <span class="va">y3</span> <span class="op">~</span> <span class="va">x1</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/AsIs.html" class="external-link">I</a></span><span class="op">(</span><span class="va">x2</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span> <span class="op">|</span> <span class="fl">0</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span> <span class="op">|</span> <span class="va">x3</span> <span class="op">/</span> <span class="va">x4</span></span></span>
@@ -204,17 +204,17 @@
 <span class="r-in"><span><span class="co">## no lhs, first/seconde rhs</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/formula.html" class="external-link">formula</a></span><span class="op">(</span><span class="va">F2</span>, lhs <span class="op">=</span> <span class="fl">0</span>, rhs <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ~x1 + I(x2^2) | 0 + log(x1)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55b988eb3718&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x5643fa92b910&gt;</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/formula.html" class="external-link">formula</a></span><span class="op">(</span><span class="va">F2</span>, lhs <span class="op">=</span> <span class="fl">0</span>, rhs <span class="op">=</span> <span class="op">-</span><span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ~x1 + I(x2^2) | 0 + log(x1)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55b988eb3718&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x5643fa92b910&gt;</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/formula.html" class="external-link">formula</a></span><span class="op">(</span><span class="va">F2</span>, lhs <span class="op">=</span> <span class="fl">0</span>, rhs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ~x1 + I(x2^2) | 0 + log(x1)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55b988eb3718&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x5643fa92b910&gt;</span>
 <span class="r-in"><span><span class="co">## first lhs, third rhs</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/formula.html" class="external-link">formula</a></span><span class="op">(</span><span class="va">F2</span>, lhs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span><span class="op">)</span>, rhs <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> y1 ~ x3/x4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55b988eb3718&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x5643fa92b910&gt;</span>
 </code></pre></div>
     </div>
   </div>
