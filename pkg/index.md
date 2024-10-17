@@ -7,14 +7,19 @@
 Infrastructure for extended formulas in R with multiple parts on the
 right-hand side and/or multiple responses on the left-hand side.
 
+_Extended Formula with 2 right-hand sides for mtcars data:_
 
-```r
-## extended Formula with 2 right-hand sides for mtcars data
+
+``` r
 library("Formula")
 F <- Formula(log(mpg) ~ disp | factor(vs))
-mf <- model.frame(f, data = head(mtcars, 3))
+mf <- model.frame(F, data = head(mtcars, 3))
+```
 
-## extract response and both regressor matrices from model frame
+_Extract response and both regressor matrices from model frame:_
+
+
+``` r
 model.response(mf)
 #>     Mazda RX4 Mazda RX4 Wag    Datsun 710 
 #>      3.044522      3.044522      3.126761
